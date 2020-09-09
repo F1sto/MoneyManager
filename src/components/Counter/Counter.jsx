@@ -43,8 +43,6 @@ const Counter = (props) => {
         props.income.income.push(income)
     }
 
-    // let timeNow = moment();
-
     let handleSubmit = () => {
         if (props.spend.newSpendValue != '') {
             addSpend();
@@ -62,7 +60,6 @@ const Counter = (props) => {
 
     return (
         <BrowserRouter>
-        {/* <Moment>{timeNow}</Moment> */}
             <div className={classes.counter}>
                 <div className={classes.count_value}>
                     <div className={classes.item}>
