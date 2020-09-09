@@ -1,0 +1,19 @@
+.counter {
+    padding-top: 20px;
+}
+
+.count_value {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.item {
+    padding: 10px 20px ;
+}
+
+.count_btn {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
