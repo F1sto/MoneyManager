@@ -1,0 +1,14 @@
+.nav {
+    position: absolute;
+    padding-left: 10px;
+    top: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(85, 106, 228);
+}
+
+.item {
+    margin: 10px 0;
+}

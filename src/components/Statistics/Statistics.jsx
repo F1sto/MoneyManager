@@ -14,16 +14,15 @@ const Statistics = (props) => {
 
     return (
         <div className={classes.statistics_padding}>
-            <hr/>
-            <p className={classes.balance}>Баланс: {props.balance}</p>
-            <hr/>
+            {/* <p className={classes.balance}>Баланс: {props.balance}</p> */}
+            <h2 className={classes.title}>История</h2>
             <div className={classes.statistics}>
                 <div className={classes.text}>
-                    <h3 className={classes.title}>Доход</h3>
+                    <h3 className={classes.subtitle}>Доход</h3>
                     {incomeElements}
                 </div>
                 <div className={classes.text}>
-                    <h3 className={classes.title}>Расходы</h3>
+                    <h3 className={classes.subtitle}>Расходы</h3>
                     {spendElements}
                 </div>
             </div>

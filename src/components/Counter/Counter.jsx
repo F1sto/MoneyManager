@@ -61,21 +61,6 @@ const Counter = (props) => {
     return (
         <BrowserRouter>
             <div className={classes.counter}>
-                <div className={classes.count_value}>
-                    <div className={classes.item}>
-                        <IncomeCounter income={props.income}
-                            updateIncome={props.updateIncome}
-                            components={props.components}
-                            balance={props.balance}
-                        />
-                    </div>
-                    <div className={classes.item}>
-                        <SpendCounter spend={props.spend}
-                            updateSpend={props.updateSpend}
-                            components={props.components}
-                        />
-                    </div>
-                </div>
                 <div className={classes.count_btn}>
                     <input onClick={handleSubmit} type="submit" value="Посчитать" />
                 </div>

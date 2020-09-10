@@ -1,6 +1,7 @@
 import React from "react";
 import SpendComponents from "./SpendComponents";
 import {renderTree} from "../../../index";
+import classes from './SpendCounter.module.css';
 
 let SpendCounter = (props) => {
 
@@ -20,24 +21,24 @@ let SpendCounter = (props) => {
         }
     }
 
-    let addSpendItem = () => {
-        let promptValue = prompt();
-        let newSpendComponent = {
-            name: promptValue
-        }
+    // let addSpendItem = () => {
+    //     let promptValue = prompt();
+    //     let newSpendComponent = {
+    //         name: promptValue
+    //     }
 
-        props.components.spend.push(newSpendComponent);
-        renderTree();
-    }
+    //     props.components.spend.push(newSpendComponent);
+    //     renderTree();
+    // }
 
     return (
-        <div>
+        <div className={classes.item}>
             <input ref={newSpendValue} type='number' onChange={handleChange} placeholder='Расход'
                    value={props.spend.newSpendValue}/>
             <select ref={newSpendName} onChange={handleChange}>
                 {spendComponents}
             </select>
-            <button onClick={addSpendItem}>Добавить тип расхода</button>
+            {/* <button onClick={addSpendItem}>Добавить тип расхода</button> */}
         </div>
     )
 

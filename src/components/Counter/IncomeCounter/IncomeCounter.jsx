@@ -1,9 +1,10 @@
 import React from "react";
-import { renderTree } from "../../../index";
 import IncomeComponents from "./IncomeComponents";
-import Moment from 'react-moment';
+import classes from "./IncomeCounter.module.css"
 import 'moment-timezone';
 import moment from 'moment';
+import { renderTree } from "../../..";
+import { updateIncome } from "../../../storage/state";
 
 let IncomeCounter = (props) => {
 
@@ -23,25 +24,50 @@ let IncomeCounter = (props) => {
         }
     }
 
-    let addIncomeItem = () => {
-        let promptValue = prompt();
-        let newIncomeComponent = {
-            name: promptValue
-        }
+    // let handleSubmit = () => {
 
-        props.components.income.push(newIncomeComponent);
+    //     if (props.income.newIncomeValue != '') {
+    //         addIncome();
+    //     }
 
-        renderTree();
-    }
+    //     updateIncome('', '');
+
+    //     renderTree();
+    // }
+
+    // let addIncome = () => {
+    //     let incomeValueInt = Number.parseInt(props.income.newIncomeValue);
+    //     props.updateBalance(incomeValueInt);
+        
+    //     let timeNow = moment();
+
+    //     let income = {
+    //         time: timeNow.format('YYYY-MM-DD HH:mm'),
+    //         name: props.income.newIncomeName,
+    //         value: incomeValueInt,
+    //     }
+    //     props.income.income.push(income)
+    // }
+
+    // let addIncomeItem = () => {
+    //     let promptValue = prompt();
+    //     let newIncomeComponent = {
+    //         name: promptValue
+    //     }
+
+    //     props.components.income.push(newIncomeComponent);
+
+    //     renderTree();
+    // }
 
     return (
-        <div>
-            <input ref={newIncomeValue} type='number' min={0} onChange={handleChange} placeholder='Расход'
+        <div className={classes.item}>
+            <input ref={newIncomeValue} type='number' min={0} onChange={handleChange} placeholder='Доход'
                 value={props.income.newIncomeValue} />
             <select ref={newIncomeName} onChange={handleChange}>
                 {incomeComponents}
             </select>
-            <button onClick={addIncomeItem}>Добавить тип дохода</button>
+            {/* <button onClick={handleSubmit}>Добавить</button> */}
         </div>
     )
 

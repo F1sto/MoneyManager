@@ -4,30 +4,23 @@ let state = {
     balance: 0,
 
     incomeComponent: {
-        income: [
-            {time: '2020-09-09 19:41', name: 'salary', value: 2000},
-            {time: '2020-09-09 19:41', name: 'passive', value: 20}
-        ],
+        income: [],
         newIncomeName: '',
         newIncomeValue: ''
     },
 
     spendComponent: {
-        spend: [
-            {time: '2020-09-09 19:41', name: 'car', value: 200},
-            {time: '2020-09-09 19:41', name: 'food', value: 12},
-            {time: '2020-09-09 19:41', name: 'food', value: 45}
-        ],
+        spend: [],
         newSpendName: '',
         newSpendValue: ''
     },
 
     components: {
         spend: [
-            {name: 'car'}, {name: 'home'}, {name: 'food'}, {name: 'drinks'}
+            {name: 'Транспорт'}, {name: 'Дом'}, {name: 'Еда'}, {name: 'Напитки'}
             ],
         income: [
-            {name: 'salary'}, {name: 'passive'}, {name: 'gift'}, {name: 'other'}
+            {name: 'З-П'}, {name: 'Пассив'}, {name: 'Подарок'}, {name: 'Другое'}
         ]
     }
 }
